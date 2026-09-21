@@ -1,0 +1,21 @@
+import matplotlib.pyplot as plt
+
+print("--- CHUONG TRINH VE BIEU DO COT ---")
+nam = int(input("Nhap so luong sinh vien Nam: "))
+nu = int(input("Nhap so luong sinh vien Nu: "))
+
+labels = ['Nam', 'Nu']
+sizes = [nam, nu]
+colors = ['#3498db', '#e74c3c']
+
+# Hàm vẽ biểu đồ cột
+plt.bar(labels, sizes, color=colors, width=0.5)
+
+# Thêm tiêu đề và nhãn cho các trục
+plt.title('Thong ke so luong sinh vien')
+plt.xlabel('Gioi tinh')
+plt.ylabel('So luong')
+
+# Lưu file
+plt.savefig('bieudo.png')
+print("=> Da luu bieu do cot vao file bieudo.png thanh cong!")
